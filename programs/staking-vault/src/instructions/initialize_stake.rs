@@ -2,7 +2,7 @@
 use anchor_lang::prelude::*;
 use crate::state::StakeAccount;
 
-/// Initialize a stake account for user
+/// Initializing a stake account for a user
 pub fn initialize_stake(ctx: Context<InitializeStake>) -> Result<()> {
     let stake_account = &mut ctx.accounts.stake_account;
     let clock = Clock::get()?;
